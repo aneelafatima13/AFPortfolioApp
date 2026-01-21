@@ -2,7 +2,10 @@
 
 on:
   push:
-    branches: [ master ] # Change this to 'master' if your main branch is named master
+    branches: [ master ]
+
+permissions:
+  contents: write # Required for the deploy action to push to the gh-pages branch
 
 jobs:
   deploy:
@@ -13,13 +16,12 @@ jobs:
       - name: Setup .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: '8.0.x' # Ensure this matches your project version
+          dotnet-version: '8.0.x'
 
       - name: Publish App
-        run: dotnet publish -c Release -o release
+        # If your .csproj is in a subfolder, change '.' to that folder name
+        run: dotnet publish -c Release -o release 
 
-      # This is critical for Blazor! 
-      # It tells GitHub Pages not to treat the site as a Jekyll site.
       - name: Add .nojekyll file
         run: touch release/wwwroot/.nojekyll
 
@@ -29,5 +31,5 @@ jobs:
       - name: Upload to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: release/wwwroot # Ensure this matches the output of dotnet publish
+          folder: release/wwwroot
           branch: gh-pages
