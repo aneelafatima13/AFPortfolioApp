@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "AFPortfolioApp",
   "resources": {
-    "hash": "sha256-XP3tljJqYbneWaFg513zCzMRSQ96IxIZVu1JVTo+9w0=",
+    "hash": "sha256-SmurhlSuTovVdkcOe8Wo4BVwMJDg87B9OsvabJyeUXs=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-vtotCeXt2UD6oc459laJT32vBgigZ+eLoUmdeFkvYDk="
     },
@@ -47,7 +47,7 @@
       "System.Text.Json.wasm": "sha256-TuEJeuPIhQJXCbvQhynsX1RGIvn8YsWg1zTGIINV+Mo=",
       "System.Text.RegularExpressions.wasm": "sha256-N5iEwt2bfvrglh1Ef1pkKFXQo82wOkhE64+4FGK7Ru8=",
       "System.Private.CoreLib.wasm": "sha256-Izv7u4aZJfhd5PqRxICbMGQ4jPrFqtdZdO7R1gOvDBY=",
-      "AFPortfolioApp.wasm": "sha256-PK8T3i53pMpoKV4jvLPzpXOb639nr/6mJuhC8vqmQrA="
+      "AFPortfolioApp.wasm": "sha256-J/HIL50CSkcsr8W72uEA3EqNrqPFUEHRSY5jEw9jiw4="
     }
   },
   "cacheBootResources": true,
