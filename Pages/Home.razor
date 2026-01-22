@@ -14,7 +14,7 @@
                 <div class="social-links">
                     <a href="https://x.com/AneelaFatima13"><i class="bi bi-twitter-x"></i></a>
                     <a href="https://github.com/aneelafatima13"><i class="bi bi-github"></i></a>
-                    <a href=" https://www.linkedin.com/in/aneela-fatima-184ab6137/"><i class="bi bi-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/aneela-fatima-184ab6137/"><i class="bi bi-linkedin"></i></a>
                 </div>
             </div>
         </div>
@@ -458,11 +458,11 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-dotnet">
                     <div class="portfolio-card">
                         <div class="portfolio-image-container">
-                            <img src="assets/img/portfolio/crm/dashboard.png" alt="CRM System" class="img-fluid" loading="eager">
+                            <img src="assets/img/portfolio/crm/login.png" alt="CRM System" class="img-fluid" loading="eager">
                             <div class="portfolio-overlay">
                                 <div class="portfolio-info">
                                     <span class="project-category">Enterprise Solution</span>
-                                    <h4>Updated CRM & Lead Activity Desk</h4>
+                                    <h4>Updated CRM</h4>
                                 </div>
                                 <div class="portfolio-actions">
                                     
@@ -541,18 +541,7 @@
             </div>
         </div>
 
-        <div class="portfolio-bottom" data-aos="fade-up" data-aos-delay="400">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h3>Like what you see?</h3>
-                    <p>Donec rutrum congue leo eget malesuada. Vivamus suscipit tortor eget felis porttitor volutpat.</p>
-                </div>
-                <div class="col-lg-4 text-lg-end">
-                    <a href="#contact" class="btn btn-accent">Let's Work Together</a>
-                </div>
-            </div>
-        </div>
-
+       
     </div>
 
 </section><!-- /Portfolio Section -->
@@ -577,7 +566,7 @@
                     </div>
                     <div>
                         <h3>Address</h3>
-                        <p>2847 Oak Street, San Francisco, CA 94102</p>
+                        <p>Wapda Town, Lahore</p>
                     </div>
                 </div>
 
@@ -587,7 +576,7 @@
                     </div>
                     <div>
                         <h3>Call Me</h3>
-                        <p>+1 (555) 234-5678</p>
+                        <p>0324 3799340</p>
                     </div>
                 </div>
 
@@ -597,44 +586,43 @@
                     </div>
                     <div>
                         <h3>Email Me</h3>
-                        <p>alex@example.com</p>
+                        <p>aneelafatimawt@gmail.com</p>
                     </div>
                 </div>
 
             </div>
 
             <div class="col-lg-8">
-                <form action="forms/contact.php" method="post" class="php-email-form">
+                <EditForm Model="@contactModel" OnValidSubmit="HandleValidSubmit" class="php-email-form">
                     <div class="row gy-4">
-
                         <div class="col-md-6">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                            <InputText @bind-Value="contactModel.Name" class="form-control" placeholder="Your Name" required />
                         </div>
-
                         <div class="col-md-6">
-                            <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                            <InputText @bind-Value="contactModel.Email" type="email" class="form-control" placeholder="Your Email" required />
                         </div>
-
                         <div class="col-md-12">
-                            <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                            <InputText @bind-Value="contactModel.Subject" class="form-control" placeholder="Subject" required />
                         </div>
-
                         <div class="col-md-12">
-                            <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                            <InputTextArea @bind-Value="contactModel.Message" class="form-control" rows="6" placeholder="Message" required />
                         </div>
 
                         <div class="col-md-12 text-center">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
+                            @if (isSending)
+                            {
+                                <div class="loading d-block">Loading...</div>
+                            }
+                            @if (!string.IsNullOrEmpty(statusMessage))
+                            {
+                                <div class="sent-message d-block">@statusMessage</div>
+                            }
 
-                            <button type="submit">Send Message</button>
+                            <button type="submit" disabled="@isSending">Send Message</button>
                         </div>
-
                     </div>
-                </form>
+                </EditForm>
             </div>
-
         </div>
 
     </div>
@@ -644,10 +632,84 @@
     <div class="modal-dialog modal-lg modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title">Updated CRM & Lead Activity Desk</h5>
+                <h5 class="modal-title">Updated CRM</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div class="modal-body p-4">
+    <h6 class="mb-4 text-accent uppercase tracking-wider">Project Enhancements & Features</h6>
+    
+    <div class="feature-item mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <h5 class="text-white">Lead Activity Desk (360° View)</h5>
+                <p class="text-secondary">Unified view of quotations, POs, invoices, deployments, and queries on a single page. Implemented <strong>rights-based access control</strong> for granular security.</p>
+            </div>
+            <div class="col-md-5">
+                            <video controls class="w-100 rounded shadow-sm border border-secondary">
+                               
+                                <source src="~/assets/videos/crm/manage_roles_and_rights.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature-item mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <h5 class="text-white">External POC Portal</h5>
+                <p class="text-secondary">Shareable links allowing external POCs to upload POs, update deployment status, and raise product queries directly.</p>
+            </div>
+            <div class="col-md-5">
+                <video controls class="w-100 rounded border border-secondary">
+                                <source src="~/assets/videos/crm/manage_roles_and_rights.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature-item mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <h5 class="text-white">AI-Powered Internal Chat</h5>
+                <p class="text-secondary">Real-time communication using <strong>SignalR</strong> with integrated AI that suggests optimized responses for CRM users.</p>
+            </div>
+            <div class="col-md-5">
+                <video controls class="w-100 rounded border border-secondary">
+                                <source src="~/assets/videos/crm/manage_roles_and_rights.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature-item mb-5">
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <h5 class="text-white">Automated Notifications & Reports</h5>
+                <p class="text-secondary">Central service using <strong>SQL Dependency</strong> for instant emails, background renewal tracking, and <strong>Fast Reports</strong> for real-time dashboards.</p>
+            </div>
+            <div class="col-md-5">
+                <video controls class="w-100 rounded border border-secondary">
+                                <source src="~/assets/videos/crm/manage_roles_and_rights.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <div class="feature-item mb-3">
+        <div class="row align-items-center">
+            <div class="col-md-7">
+                <h5 class="text-white">Digital Signature & Data Integration</h5>
+                <p class="text-secondary">Integrated <strong>Google API</strong> for company intelligence and a custom tool for digital signing of Quotations and Invoices.</p>
+            </div>
+            <div class="col-md-5">
+                <video controls class="w-100 rounded border border-secondary">
+                                <source src="~/assets/videos/crm/manage_roles_and_rights.mp4" type="video/mp4">
+                </video>
+            </div>
+        </div>
+    </div>
+</div>
+            @* <div class="modal-body">
                 <h6>Key Features:</h6>
                 <ul>
                     <li><strong>Lead Activity Desk:</strong> 360° view of quotations, POs, and invoices on one page.</li>
@@ -655,7 +717,7 @@
                     <li><strong>Automation:</strong> Background services for email notifications and expiration tracking.</li>
                     <li><strong>External Access:</strong> Shareable links for POCs to upload POs directly.</li>
                 </ul>
-            </div>
+            </div> *@
         </div>
     </div>
 </div>
@@ -697,15 +759,89 @@
         </div>
     </div>
 </div>
+
+
 @inject IJSRuntime JS
+@using System.Net.Mail
+@using System.Net
 
 @code {
+    // 1. Lifecycle Methods
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
         {
-            // This forces the template's JS to re-scan the page for animations
             await JS.InvokeVoidAsync("AOS.init");
+        }
+    }
+
+    // 2. Models
+    public class ContactForm
+    {
+        public string Name { get; set; } = "";
+        public string Email { get; set; } = "";
+        public string Subject { get; set; } = "";
+        public string Message { get; set; } = "";
+    }
+
+    // 3. Properties
+    private ContactForm contactModel = new ContactForm();
+    private bool isSending = false;
+    private string statusMessage = "";
+
+    // 4. Logic
+    private async Task HandleValidSubmit()
+    {
+        isSending = true;
+        statusMessage = "";
+
+        try
+        {
+            using (SmtpClient client = new SmtpClient("smtp.gmail.com", 587))
+            {
+                client.EnableSsl = true;
+                client.Credentials = new NetworkCredential("aneelafatimawt@gmail.com", "udol vqtc rsgl xoqa");
+
+                MailMessage mailMessage = new MailMessage();
+                mailMessage.From = new MailAddress("aneelafatimawt@gmail.com", "Craftivo Portfolio");
+                mailMessage.To.Add("aneelafatimawt@gmail.com");
+                mailMessage.Subject = $"New Inquiry: {contactModel.Subject}";
+                mailMessage.IsBodyHtml = true;
+
+                // Using a simpler string format to avoid "Unterminated string" issues in Razor
+                string msgBody = contactModel.Message.Replace("\n", "<br>");
+
+                mailMessage.Body = $@"
+                    <div style='background-color: #141414; padding: 40px; font-family: sans-serif; color: #ffffff;'>
+                        <div style='max-width: 600px; margin: 0 auto; background-color: #1a1a1a; border: 1px solid #333; border-radius: 12px; overflow: hidden;'>
+                            <div style='background-color: #ff5e5e; padding: 20px; text-align: center;'>
+                                <h2 style='margin: 0; color: #ffffff;'>New Contact Message</h2>
+                            </div>
+                            <div style='padding: 30px;'>
+                                <p style='color: #888; text-transform: uppercase; font-size: 11px; font-weight: bold;'>From</p>
+                                <p style='font-size: 18px; color: #ffffff;'>{contactModel.Name} ({contactModel.Email})</p>
+                                <hr style='border: 0; border-top: 1px solid #333; margin: 20px 0;'>
+                                <p style='color: #888; text-transform: uppercase; font-size: 11px; font-weight: bold;'>Message Content</p>
+                                <div style='background-color: #222; padding: 20px; border-radius: 8px; color: #ccc;'>
+                                    {msgBody}
+                                </div>
+                            </div>
+                        </div>
+                    </div>";
+
+                await client.SendMailAsync(mailMessage);
+            }
+
+            statusMessage = "Your message has been sent. Thank you!";
+            contactModel = new ContactForm();
+        }
+        catch (Exception ex)
+        {
+            statusMessage = "Error: " + ex.Message;
+        }
+        finally
+        {
+            isSending = false;
         }
     }
 }
