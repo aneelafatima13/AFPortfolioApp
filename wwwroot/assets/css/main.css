@@ -4239,3 +4239,73 @@ section,
 .starter-section {
   /* Add your styles here */
 }
+
+/* Styling for all Modals */
+.modal-content {
+    background-color: #1a1a1a !important; /* Slightly lighter than pure black for depth */
+    color: #ffffff;
+    border: 1px solid #333;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+    border-bottom: 1px solid #2d2d2d;
+    padding: 1.5rem;
+}
+
+.modal-title {
+    font-weight: 700;
+    color: #ffffff;
+}
+
+/* Make the X close button visible on dark background */
+.btn-close {
+    filter: invert(1) grayscale(100%) brightness(200%);
+    opacity: 0.8;
+}
+
+    .btn-close:hover {
+        opacity: 1;
+    }
+
+.modal-body {
+    padding: 2rem;
+    line-height: 1.6;
+}
+
+    /* Section Headings (Key Features, Project Scope, etc.) */
+    .modal-body h6 {
+        color: #ff5e5e; /* Coral accent from your design */
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 1.2rem;
+        font-weight: 700;
+    }
+
+    /* Styled Lists */
+    .modal-body ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .modal-body li {
+        margin-bottom: 0.8rem;
+        position: relative;
+        padding-left: 1.5rem;
+        color: #cccccc; /* Slightly muted text for readability */
+    }
+
+        .modal-body li::before {
+            content: "→"; /* Modern arrow bullet */
+            position: absolute;
+            left: 0;
+            color: #ff5e5e;
+            font-weight: bold;
+        }
+
+    .modal-body strong {
+        color: #ffffff; /* Make bold text pop */
+        font-weight: 600;
+    }
