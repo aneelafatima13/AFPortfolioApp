@@ -2061,7 +2061,7 @@ section,
 }
 
 .portfolio .portfolio-card .portfolio-image-container .portfolio-overlay .portfolio-actions a {
-  width: 40px;
+  width: 60px;
   height: 40px;
   background-color: rgba(255, 255, 255, 0.9);
   color: var(--accent-color);
