@@ -1,95 +1,112 @@
 ﻿@inherits LayoutComponentBase
 
+@* 1. Add this class binding to the body or a wrapper *@
+<div class="@(_isNavActive ? "mobile-nav-active" : "")">
 
-<header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+            <a href="/" class="logo d-flex align-items-center me-auto">
+                <h1 class="sitename">AF Portfolio</h1>
+            </a>
 
-        <a href="index.html" class="logo d-flex align-items-center me-auto">
-              <h1 class="sitename">AF Portfolio</h1>
-        </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    @* 2. Added @onclick to close menu when a link is clicked *@
+                    <li><a href="#hero" class="active" @onclick="CloseMenu">Home</a></li>
+                    <li><a href="#about" @onclick="CloseMenu">About</a></li>
+                    <li><a href="#resume" @onclick="CloseMenu">Resume</a></li>
+                    <li><a href="#services" @onclick="CloseMenu">Services</a></li>
+                    <li><a href="#portfolio" @onclick="CloseMenu">Portfolio</a></li>
+                    <li><a href="#contact" @onclick="CloseMenu">Contact</a></li>
+                </ul>
+                @* 3. Toggle button calls the C# method *@
+                <i class="mobile-nav-toggle d-xl-none bi @(_isNavActive ? "bi-x" : "bi-list")"
+                   @onclick="ToggleMenu"></i>
+            </nav>
+        </div>
+    </header>
 
-        <nav id="navmenu" class="navmenu">
-            <ul>
-                <li><a href="#hero" class="active">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#resume">Resume</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-
-        
-    </div>
-</header>
+    <main class="main">
+        @Body
+    </main>
 
 
-<main class="main">
-    @Body
-</main>
+    <footer id="footer" class="footer">
 
-<footer id="footer" class="footer">
-
-    <div class="container footer-top">
-        <div class="row gy-4">
-            <div class="col-lg-5 col-md-12 footer-about">
-                <a href="#hero" class="logo d-flex align-items-center">
-                    <span class="sitename">AF Portfolio</span>
-                </a>
-                <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
-                <div class="social-links d-flex mt-4">
-                    <a href="https://x.com/AneelaFatima13"><i class="bi bi-twitter-x"></i></a>
-                    <a href="https://github.com/aneelafatima13"><i class="bi bi-github"></i></a>
-                    <a href="https://www.linkedin.com/in/aneela-fatima-184ab6137/"><i class="bi bi-linkedin"></i></a>
+        <div class="container footer-top">
+            <div class="row gy-4">
+                <div class="col-lg-5 col-md-12 footer-about">
+                    <a href="#hero" class="logo d-flex align-items-center">
+                        <span class="sitename">AF Portfolio</span>
+                    </a>
+                    <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+                    <div class="social-links d-flex mt-4">
+                        <a href="https://x.com/AneelaFatima13"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://github.com/aneelafatima13"><i class="bi bi-github"></i></a>
+                        <a href="https://www.linkedin.com/in/aneela-fatima-184ab6137/"><i class="bi bi-linkedin"></i></a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-lg-2 col-6 footer-links">
-                <h4>Useful Links</h4>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Services</a></li>
-                    
-                </ul>
-            </div>
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Services</a></li>
 
-            <div class="col-lg-2 col-6 footer-links">
-                <h4>Our Services</h4>
-                <ul>
-                    <li><a href="#">.Net Web Development</a></li>
-                    <li><a href="#">React & Node.js Web Development</a></li>
-                    <li><a href="#">Angular & Node.js Web Development</a></li>
-                    <li><a href="#">Mobile App Development</a></li>
-                    
-                </ul>
-            </div>
+                    </ul>
+                </div>
 
-            <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
-                <h4>Contact Me</h4>
-                <p>Wapda Town, Lahore</p>
-                <p>Pakistan</p>
-                <p class="mt-4"><strong>Phone:</strong> <span>0324 3799340</span></p>
-                <p><strong>Email:</strong> <span>aneelafatimawt@gmail.com</span></p>
-            </div>
+                <div class="col-lg-2 col-6 footer-links">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#">.Net Web Development</a></li>
+                        <li><a href="#">React & Node.js Web Development</a></li>
+                        <li><a href="#">Angular & Node.js Web Development</a></li>
+                        <li><a href="#">Mobile App Development</a></li>
 
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+                    <h4>Contact Me</h4>
+                    <p>Wapda Town, Lahore</p>
+                    <p>Pakistan</p>
+                    <p class="mt-4"><strong>Phone:</strong> <span>0324 3799340</span></p>
+                    <p><strong>Email:</strong> <span>aneelafatimawt@gmail.com</span></p>
+                </div>
+
+            </div>
         </div>
-    </div>
 
-    <div class="container copyright text-center mt-4">
-        <p>© <span>Copyright</span> <strong class="px-1 sitename">AF Portfolio</strong> <span>All Rights Reserved</span></p>
-        <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you've purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <div class="container copyright text-center mt-4">
+            <p>© <span>Copyright</span> <strong class="px-1 sitename">AF Portfolio</strong> <span>All Rights Reserved</span></p>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you've purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
         </div>
-    </div>
 
-</footer>
+    </footer>
 
 
-<a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
+</div>
+
+@code {
+    private bool _isNavActive = false;
+
+    private void ToggleMenu()
+    {
+        _isNavActive = !_isNavActive;
+    }
+
+    private void CloseMenu()
+    {
+        _isNavActive = false;
+    }
+}
