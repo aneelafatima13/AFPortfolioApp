@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "AFPortfolioApp",
   "resources": {
-    "hash": "sha256-4LvqtHPrjHvV7gVmptovENWJm2Bzvja0gIRY9C+6FCs=",
+    "hash": "sha256-o6Bke/FBdZRHmjyss/rvYNjGmJxhFDJo1/9Z+r/AGbo=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-NljIbpK/1KCj0+knpX8U77Rbl5kTtfFIuFjK7AuczEw="
     },
@@ -18,7 +18,7 @@
     },
     "coreAssembly": {},
     "assembly": {
-      "Microsoft.AspNetCore.Components.wasm": "sha256-fAI4Dp3HFrlnmCmWQ+DZPXDhvmYPbqKKjHG1plMH3cU=",
+      "Microsoft.AspNetCore.Components.wasm": "sha256-LnkOO9/Gs85Ln4P4usLNedKhWP1aaNFrbthhBmfFKbM=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-U5/RqmZqPptWNRS4NWzGNzXp0yX31XymNlD1U4iD3Do=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-x4/TEpwGv8kUWHJeXVIZLPX34TRPh4o21IOI4vQNPBc=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-x1F82njgsF9dzQZyrJ0ztCzBd2r766MNbpIjisdGtB0=",
@@ -36,7 +36,7 @@
       "System.Collections.Concurrent.wasm": "sha256-eHj2nKXeq5i/Pz3VtWCvgP7l5YA9xP9tgOP8L/emU/I=",
       "System.Collections.NonGeneric.wasm": "sha256-jcycSZi2V1i6ucmYdOzTXKIUOH1n78siByZhN1QWJAY=",
       "System.Collections.Specialized.wasm": "sha256-c1DcO8rZ8UU+nwNB+lAdzSHYaIu45NNI2weAT9MYFNg=",
-      "System.Collections.wasm": "sha256-ibs6OC7yeEhpnrhOaVINjUoyTSAD4kY3zS1ugGnOCRU=",
+      "System.Collections.wasm": "sha256-x/jMaEMFHhGglWkXlizp8rkVqihO1ai/YRtR0QHCKAU=",
       "System.ComponentModel.Primitives.wasm": "sha256-cax85748mrJc6i69jPatEJws1Pl2b1WzsOhmsvP2FT8=",
       "System.ComponentModel.TypeConverter.wasm": "sha256-zRVU8lzyz+2wowqtygTxaG4deJfHpqUgnqS/WBXrFbs=",
       "System.ComponentModel.wasm": "sha256-eASv6/hAr1v6bTy5jSaaiSY0JytxSFaCOpEL+lcGP7A=",
@@ -56,8 +56,8 @@
       "System.Text.Json.wasm": "sha256-L4YlG21pLNxO4F30aU19VzEqgzhm7wZd71RAyX9BH0E=",
       "System.Text.RegularExpressions.wasm": "sha256-ocCNWHH3NXDA5L424ZYhEmBpJmEyE4tNHeu4puAj1ek=",
       "System.wasm": "sha256-jXhnUNHzjjL7Plo7WcHuX7V5Dc/Umt+qmGGC+Js76SE=",
-      "System.Private.CoreLib.wasm": "sha256-k2UdH6XJ8OaUYR10ajLao39kgutibKJq06oXtMHx9Lk=",
-      "AFPortfolioApp.wasm": "sha256-QrrSCmMynjimTlMQc189HTiWuQpxYY5nmqIck3QJOQg="
+      "System.Private.CoreLib.wasm": "sha256-zJJE9lhezdM1OOXdK9P9/zsjGjnrRbyCopCV6rQvKnQ=",
+      "AFPortfolioApp.wasm": "sha256-+WKB5iUzxrbjYr4KIXHBQCxkrpmQujKZG7el1AWF3Bk="
     }
   },
   "cacheBootResources": true,
