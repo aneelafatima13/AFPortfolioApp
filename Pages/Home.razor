@@ -127,63 +127,52 @@
                         <div class="section-tag">Core Skills</div>
                         <h3>Technical Proficiency</h3>
 
-                        <div class="skills-list skills-animation">
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">C#, ASP.Net, MVC, Web API, Core</span>
-                                    <span class="skill-percent">90%</span>
+                        <div class="skills-list">
+                            @foreach (var skill in Skills)
+                            {
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">@skill.Name</span>
+                                        <span class="skill-percent">@skill.Level%</span>
+                                    </div>
+                                    <div class="progress">
+                                        @* Inline style bound to the C# variable *@
+                                        <div class="progress-bar" role="progressbar"
+                                             style="width: @(_isAnimated ? skill.Level + "%" : "0%") ; transition: width 1.5s ease-in-out;">
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">SQL &amp; MySQL &amp; MongoDB</span>
-                                    <span class="skill-percent">85%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-
-
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">React &amp; Node.js</span>
-                                    <span class="skill-percent">50%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-
-                           
-
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Flutter, Kotlin</span>
-                                    <span class="skill-percent">50%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-
-                            
-
-                            
-                            <div class="skill-item">
-                                <div class="skill-info">
-                                    <span class="skill-name">Angular &amp; Node.js</span>
-                                    <span class="skill-percent">30%</span>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
+                            }
                         </div>
+
+                        @code {
+                            private bool _isAnimated = false;
+
+                            // A simple list to keep your code clean
+                            private List<Skill> Skills = new()
+                                                {
+                                                new Skill { Name = "C#, ASP.Net, MVC", Level = 90 },
+                                                new Skill { Name = "SQL & MySQL & MongoDB", Level = 85 },
+                                                new Skill { Name = "Web API, Core", Level = 60 },
+                                                new Skill { Name = "React & Node.js", Level = 50 },
+                                                new Skill { Name = "Angular & Node.js", Level = 40 },
+                                                new Skill { Name = "Fluter, Mobile App Development", Level = 40 }
+
+                                                };
+
+                            protected override async Task OnAfterRenderAsync(bool firstRender)
+                            {
+                                if (firstRender)
+                                {
+                                    // Small delay to trigger the CSS transition after the page loads
+                                    await Task.Delay(500);
+                                    _isAnimated = true;
+                                    StateHasChanged();
+                                }
+                            }
+
+                            public class Skill { public string Name; public int Level; }
+                        }
                     </div>
                 </div>
             </div>
