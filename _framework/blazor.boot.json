@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "AFPortfolioApp",
   "resources": {
-    "hash": "sha256-uJmakebjoBk0vSiHGQh1q6XyqeFnUTdynZpGYOEXCK0=",
+    "hash": "sha256-4LvqtHPrjHvV7gVmptovENWJm2Bzvja0gIRY9C+6FCs=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-NljIbpK/1KCj0+knpX8U77Rbl5kTtfFIuFjK7AuczEw="
     },
@@ -18,7 +18,7 @@
     },
     "coreAssembly": {},
     "assembly": {
-      "Microsoft.AspNetCore.Components.wasm": "sha256-5zJBwBo4QF7t/So6h90qFzdxxTQsvDu5mtCoRleK4DY=",
+      "Microsoft.AspNetCore.Components.wasm": "sha256-fAI4Dp3HFrlnmCmWQ+DZPXDhvmYPbqKKjHG1plMH3cU=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-U5/RqmZqPptWNRS4NWzGNzXp0yX31XymNlD1U4iD3Do=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-x4/TEpwGv8kUWHJeXVIZLPX34TRPh4o21IOI4vQNPBc=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-x1F82njgsF9dzQZyrJ0ztCzBd2r766MNbpIjisdGtB0=",
@@ -51,13 +51,13 @@
       "System.Private.Uri.wasm": "sha256-qoRbhhElCxtOUKnku3KMExlV56lBfaIzUhmoo23OYUs=",
       "System.Runtime.InteropServices.JavaScript.wasm": "sha256-tsG3RESTY+81im0X3HNCb4Qjb+ht2h7n9RJ52xtJP88=",
       "System.Runtime.Serialization.Primitives.wasm": "sha256-VjoPrMROE0GwNGXegKOd1LCEAN3Gk8gtkHIZzbLfgDY=",
-      "System.Runtime.wasm": "sha256-sww4onefU1d5lu9kyEofQ63632YM0wCb+nruwfEmUk4=",
+      "System.Runtime.wasm": "sha256-aNlNxtiCDXbYYrKn0HQATvbAk7YJ8g80m0eFo5Vt0V4=",
       "System.Text.Encodings.Web.wasm": "sha256-QlEAY71V5tn3FS4QI+N/MDAf43l3aWX0SFMMJbfw3C8=",
       "System.Text.Json.wasm": "sha256-L4YlG21pLNxO4F30aU19VzEqgzhm7wZd71RAyX9BH0E=",
       "System.Text.RegularExpressions.wasm": "sha256-ocCNWHH3NXDA5L424ZYhEmBpJmEyE4tNHeu4puAj1ek=",
       "System.wasm": "sha256-jXhnUNHzjjL7Plo7WcHuX7V5Dc/Umt+qmGGC+Js76SE=",
       "System.Private.CoreLib.wasm": "sha256-k2UdH6XJ8OaUYR10ajLao39kgutibKJq06oXtMHx9Lk=",
-      "AFPortfolioApp.wasm": "sha256-azsi56+uF2A33tgFnVGKh1VhquLiAAFqHHrohbylNw8="
+      "AFPortfolioApp.wasm": "sha256-QrrSCmMynjimTlMQc189HTiWuQpxYY5nmqIck3QJOQg="
     }
   },
   "cacheBootResources": true,
