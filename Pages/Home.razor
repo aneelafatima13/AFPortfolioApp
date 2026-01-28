@@ -145,34 +145,6 @@
                             }
                         </div>
 
-                        @code {
-                            private bool _isAnimated = false;
-
-                            // A simple list to keep your code clean
-                            private List<Skill> Skills = new()
-                                                {
-                                                new Skill { Name = "C#, ASP.Net, MVC", Level = 90 },
-                                                new Skill { Name = "SQL & MySQL & MongoDB", Level = 85 },
-                                                new Skill { Name = "Web API, Core", Level = 60 },
-                                                new Skill { Name = "React & Node.js", Level = 50 },
-                                                new Skill { Name = "Angular & Node.js", Level = 40 },
-                                                new Skill { Name = "Fluter, Mobile App Development", Level = 40 }
-
-                                                };
-
-                            protected override async Task OnAfterRenderAsync(bool firstRender)
-                            {
-                                if (firstRender)
-                                {
-                                    // Small delay to trigger the CSS transition after the page loads
-                                    await Task.Delay(500);
-                                    _isAnimated = true;
-                                    StateHasChanged();
-                                }
-                            }
-
-                            public class Skill { public string Name; public int Level; }
-                        }
                     </div>
                 </div>
             </div>
@@ -831,9 +803,30 @@
         if (firstRender)
         {
             await JS.InvokeVoidAsync("AOS.init");
+            await Task.Delay(500);
+            _isAnimated = true;
+            StateHasChanged();
         }
     }
 
+
+    private bool _isAnimated = false;
+
+    // A simple list to keep your code clean
+    private List<Skill> Skills = new()
+                                                {
+                                                new Skill { Name = "C#, ASP.Net, MVC", Level = 90 },
+                                                new Skill { Name = "SQL & MySQL & MongoDB", Level = 85 },
+                                                new Skill { Name = "Web API, Core", Level = 60 },
+                                                new Skill { Name = "React & Node.js", Level = 50 },
+                                                new Skill { Name = "Angular & Node.js", Level = 40 },
+                                                new Skill { Name = "Fluter, Mobile App Development", Level = 40 }
+
+                                                };
+
+    
+
+    public class Skill { public string Name; public int Level; }
     // 2. Models
     public class ContactForm
     {
@@ -893,6 +886,8 @@
 
             statusMessage = "Your message has been sent. Thank you!";
             contactModel = new ContactForm();
+
+
         }
         catch (Exception ex)
         {
