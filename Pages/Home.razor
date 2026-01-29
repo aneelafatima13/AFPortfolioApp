@@ -38,7 +38,7 @@
                 <div class="profile-card">
                     <div class="profile-header">
                         <div class="profile-avatar">
-                            <img src="assets/img/profile/img8.jpeg" class="img-fluid" alt="">
+                            <img src="assets/img/profile/img.jpeg" class="img-fluid" alt="">
                             <div class="status-indicator"></div>
                         </div>
                         <h3>Aneela Fatima</h3>
@@ -521,15 +521,7 @@
         <div class="row gy-4">
 
             <div class="col-lg-4">
-                <div class="info-item">
-                    <div class="icon-wrapper">
-                        <i class="bi bi-geo-alt"></i>
-                    </div>
-                    <div>
-                        <h3>Address</h3>
-                        <p>Wapda Town, Lahore</p>
-                    </div>
-                </div>
+               
 
                 <div class="info-item">
                     <div class="icon-wrapper">
@@ -540,6 +532,26 @@
                         <p>0324 3799340</p>
                     </div>
                 </div>
+
+              
+
+            </div>
+            <div class="col-lg-4">
+                <div class="info-item">
+                    <div class="icon-wrapper">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <div>
+                        <h3>Address</h3>
+                        <p>Wapda Town, Lahore</p>
+                    </div>
+                </div>
+
+               
+
+            </div>
+            <div class="col-lg-4">
+               
 
                 <div class="info-item">
                     <div class="icon-wrapper">
@@ -553,7 +565,7 @@
 
             </div>
 
-            <div class="col-lg-8">
+          @*   <div class="col-lg-8">
                 <EditForm Model="@contactModel" OnValidSubmit="HandleValidSubmit" class="php-email-form">
                     <div class="row gy-4">
                         <div class="col-md-6">
@@ -583,7 +595,7 @@
                         </div>
                     </div>
                 </EditForm>
-            </div>
+            </div> *@
         </div>
 
     </div>
@@ -796,6 +808,12 @@
 @using System.Net.Mail
 @using System.Net
 
+@inject HttpClient Http
+@inject IJSRuntime JS
+@using System.Net.Mail
+@using System.Net
+@using static System.Net.WebRequestMethods
+
 @code {
     // 1. Lifecycle Methods
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -809,22 +827,18 @@
         }
     }
 
-
     private bool _isAnimated = false;
 
     // A simple list to keep your code clean
     private List<Skill> Skills = new()
-                                                {
-                                                new Skill { Name = "C#, ASP.Net, MVC", Level = 90 },
-                                                new Skill { Name = "SQL & MySQL & MongoDB", Level = 85 },
-                                                new Skill { Name = "Web API, Core", Level = 60 },
-                                                new Skill { Name = "React & Node.js", Level = 50 },
-                                                new Skill { Name = "Angular & Node.js", Level = 40 },
-                                                new Skill { Name = "Fluter, Mobile App Development", Level = 40 }
-
-                                                };
-
-    
+    {
+        new Skill { Name = "C#, ASP.Net, MVC", Level = 90 },
+        new Skill { Name = "SQL & MySQL & MongoDB", Level = 85 },
+        new Skill { Name = "Web API, Core", Level = 60 },
+        new Skill { Name = "React & Node.js", Level = 50 },
+        new Skill { Name = "Angular & Node.js", Level = 40 },
+        new Skill { Name = "Fluter, Mobile App Development", Level = 40 }
+    };
 
     public class Skill { public string Name; public int Level; }
     // 2. Models
