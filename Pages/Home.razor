@@ -406,6 +406,60 @@
                 <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-dotnet">
                     <div class="portfolio-card">
                         <div class="portfolio-image-container">
+                            <div id="crmCarousel" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-indicators">
+                                    <button type="button" data-bs-target="#crmCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                    <button type="button" data-bs-target="#crmCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                    <button type="button" data-bs-target="#crmCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                </div>
+
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="~/assets/img/bizone imges/userside main view.png" class="d-block w-100" alt="Login Page">
+                                    </div>
+                                    <div class="carousel-item">
+                                         <img src="~/assets/img/bizone imges/shop.png" class="d-block w-100" alt="Dashboard">
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="~/assets/img/bizone imges/shop filters.png" class="d-block w-100" alt="Reports">
+                                    </div>
+                                </div>
+
+                                <button class="carousel-control-prev" type="button" data-bs-target="#crmCarousel" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#crmCarousel" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                                </button>
+                            </div>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <span class="project-category">BizOne Enterprise Solution</span>
+                                    <h4>Art Studio </h4>
+                                </div>
+                                <div class="portfolio-actions">
+                                    
+                                    <a href="#" class="portfolio-details" data-bs-toggle="modal" data-bs-target="#artStudioModal">
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-meta">
+                            <div class="project-tags">
+                                <span class="tag">.NET 8</span>
+                                <span class="tag">AI Integration</span>
+                                <span class="tag">FastReports</span>
+                            </div>
+                            <div class="project-year">2025</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-dotnet">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image-container">
                             <img src="assets/img/portfolio/crm/login.png" alt="CRM System" class="img-fluid" loading="eager">
                             <div class="portfolio-overlay">
                                 <div class="portfolio-info">
@@ -790,6 +844,59 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="artStudioModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Furniture E-Commerce Store</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h6>Development Details:</h6>
+                <p>A solo practice project designed to master the MVC architecture.</p>
+                <ul>
+                    <li><strong>Tech Stack:</strong> C#, ASP.NET MVC5, ADO.Net, MS SQL Server.</li>
+                    <li><strong>Focus:</strong> EMS, DMS, Products, Orders handling, CRUD operations, and secure order flows.</li>
+                </ul>
+
+                <h6 class="mb-4 text-accent uppercase tracking-wider">Project Features</h6>
+
+                <div class="feature-item mb-5">
+                    <div class="row align-items-center">
+                        <div class="col-md-12">
+                            <h5 class="text-white mb-3">Project Evolution & Architecture</h5>
+                            <p class="text-secondary mb-4">
+                                Originally engineered as a <strong>React.js and Node.js</strong> application, I successfully migrated and re-architected the entire platform into a robust <strong>ASP.NET MVC and SQL Server</strong> environment to enhance server-side performance and security.
+                            </p>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <h6 class="text-white">Core Development</h6>
+                                    <p class="text-secondary small">
+                                        Developed the complete end-to-end customer journey, including dynamic product galleries, secure multi-step order placement, and an integrated shopping cart management system.
+                                    </p>
+                                </div>
+
+                                <div class="col-md-6 mb-3">
+                                    <h6 class="text-white">Advanced Features</h6>
+                                    <p class="text-secondary small">
+                                        Implemented real-time order tracking and automated updates. Engineered a <strong>Rights-Based Access Control (RBAC)</strong> system to manage distinct workflows for customers and admins.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="pt-3 border-top border-secondary">
+                                <p class="text-secondary small">
+                                    <span class="text-white"><strong>Optimization:</strong></span> Focused on clean code and system scalability, ensuring seamless data persistence and optimized query performance for high-traffic art listings.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
